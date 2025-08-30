@@ -7,9 +7,9 @@ services:
       - '443:443'
       - '81:81'
     environment:
-      - PUID=996
-      - PGID=988
-      - TZ=America/New_York
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
     volumes:
       - /mnt/data/docker/volumes/nginx-proxy-manager/data:/data
       - /mnt/data/docker/volumes/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
