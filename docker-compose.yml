@@ -9,12 +9,10 @@ services:
       - "443:443"
       - "81:81"
     environment:
-      - PUID=${PUID}
-      - PGID=${PGID}
       - TZ=${TZ}
     volumes:
-      - /mnt/data/docker/volumes/nginx-proxy-manager/data:/data
-      - /mnt/data/docker/volumes/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
+      - npm_data:/data
+      - npm_letsencrypt:/etc/letsencrypt
     restart: unless-stopped
     networks:
       - proxy
@@ -23,3 +21,9 @@ services:
 networks:
   proxy:
     external: true
+
+volumes:
+  npm_data:
+    name: npm_data
+  npm_letsencrypt:
+    name: npm_letsencrypt
