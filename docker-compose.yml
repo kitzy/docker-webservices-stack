@@ -1,11 +1,13 @@
+version: "3.8"
+
 services:
   app:
-    image: 'jc21/nginx-proxy-manager:latest'
+    image: jc21/nginx-proxy-manager:latest
     container_name: nginx-proxy-manager
     ports:
-      - '80:80'
-      - '443:443'
-      - '81:81'
+      - "80:80"
+      - "443:443"
+      - "81:81"
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
@@ -15,6 +17,9 @@ services:
       - /mnt/data/docker/volumes/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
     restart: unless-stopped
     networks:
-      proxy:
-        external: true
+      - proxy
+      - default
 
+networks:
+  proxy:
+    external: true
