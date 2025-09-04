@@ -14,3 +14,7 @@ services:
       - /mnt/data/docker/volumes/nginx-proxy-manager/data:/data
       - /mnt/data/docker/volumes/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
     restart: unless-stopped
+    networks:
+      proxy:
+        external: true
+
