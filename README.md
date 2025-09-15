@@ -2,9 +2,9 @@
 
 A Docker Compose stack for running [Nginx Proxy Manager](https://nginxproxymanager.com/) - a simple, powerful proxy server with SSL support, perfect for managing multiple web services behind a single entry point.
 
-> **⚠️ Warning:** This is my actual live configuration for my homelab, and it has ports exposed that you may not intend to expose. Do not deploy this in your environment without reviewing the exposed ports and removing any that you do not need. See the [Ports](#ports) section for a list of default ports.
-
 This stack provides a containerized reverse proxy solution with automatic SSL certificate management through Let's Encrypt integration.
+
+> **⚠️ Warning:** This is my actual live configuration for my homelab, and it has ports exposed that you may not intend to expose. Do not deploy this in your environment without reviewing the exposed ports and removing any that you do not need. See the [Ports](#ports) section for a list of default ports.
 
 ## Prerequisites
 
