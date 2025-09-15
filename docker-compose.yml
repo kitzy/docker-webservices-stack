@@ -9,6 +9,8 @@ services:
       - "443:443"
       - "81:81"
       - "8220:8220" # Required for osquery as part of my Fleet deployment https://github.com/kitzy/docker-fleetdm-stack
+      - "3748:3748/udp" # Required for Unifi
+      - "8080:8080" # Required for Unifi
     environment:
       - TZ=${TZ}
     volumes:
