@@ -8,7 +8,7 @@ services:
       - "80:80"
       - "443:443"
       - "81:81"
-      - "8220:8220"
+      - "8220:8220" # Required for osquery as part of my Fleet deployment https://github.com/kitzy/docker-fleetdm-stack
     environment:
       - TZ=${TZ}
     volumes:
